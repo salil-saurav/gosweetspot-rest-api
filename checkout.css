@@ -1,0 +1,279 @@
+/* GoSweetSpot Shipping Calculator Styles */
+
+.gss-shipping-row {
+    background: #f7f7f7;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#gss-calculate-shipping {
+    background: #0073aa;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    margin-top: 15px;
+}
+
+#gss-calculate-shipping:hover {
+    background: #005a87;
+}
+
+#gss-calculate-shipping:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Shipping Options Container */
+.gss-shipping-options-container {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.gss-shipping-options-container h4 {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Options List */
+.gss-options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.gss-option {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gss-option:hover {
+    border-color: #0073aa;
+    background: #f9f9f9;
+}
+
+.gss-option input[type="radio"] {
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.gss-option input[type="radio"]:checked+label {
+    font-weight: 600;
+}
+
+.gss-option label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    margin: 0;
+}
+
+.gss-carrier-name {
+    flex: 1;
+    font-size: 15px;
+    color: #333;
+}
+
+.gss-delivery-time {
+    flex: 1;
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+}
+
+.gss-cost {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0073aa;
+    min-width: 80px;
+    text-align: right;
+}
+
+/* Confirm Button */
+#gss-confirm-shipping {
+    background: #46b450;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+#gss-confirm-shipping:hover {
+    background: #399d40;
+}
+
+#gss-confirm-shipping:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Messages */
+.gss-error {
+    color: #dc3232;
+    background: #fef7f7;
+    padding: 12px;
+    border-left: 4px solid #dc3232;
+    margin: 10px 0;
+}
+
+.gss-success {
+    color: #46b450;
+    background: #f7fdf8;
+    padding: 12px;
+    border-left: 4px solid #46b450;
+    margin: 0 0 15px 0;
+}
+
+/* span.woocommerce-no-shipping-available-html.e-checkout-message {
+    display: none;
+} */
+
+/* Add to checkout.css */
+
+.gss-instruction-notice {
+    background-color: #f8f9fa;
+}
+
+.gss-instruction-notice .woocommerce-info {
+    background-color: #e7f3ff;
+    border-left: 4px solid #0066cc;
+    padding: 12px 15px;
+    margin: 0;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.gss-instruction-notice p {
+    font-size: 14px;
+    color: #0066cc;
+    line-height: 1.6;
+    margin: 10px 0;
+    padding-left: 10px;
+}
+
+.gss-instruction-notice strong {
+    color: #004499;
+}
+
+.woocommerce-info {
+    background-color: #e7f3ff !important;
+    border-left-color: #0066cc !important;
+}
+
+table.shop_table.woocommerce-checkout-review-order-table .woocommerce-info::before {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gss-option label {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .gss-carrier-name,
+    .gss-delivery-time,
+    .gss-cost {
+        text-align: left;
+    }
+
+    .gss-cost {
+        min-width: auto;
+    }
+}
+
+/* Loading State */
+#gss-shipping-options p {
+    margin: 10px 0;
+    padding: 15px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    text-align: center;
+}
+
+
+/* checkout.css */
+.gss-rate-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.gss-rate-list li {
+    border-bottom: 1px solid #eee;
+}
+
+.gss-rate-list li:last-child {
+    border-bottom: none;
+}
+
+.gss-rate-option {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.gss-rate-option input {
+    margin-right: 15px;
+}
+
+.gss-rate-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.gss-carrier {
+    font-weight: bold;
+    color: #333;
+}
+
+.gss-time {
+    font-size: 0.85em;
+    color: #666;
+}
+
+.gss-price {
+    font-weight: bold;
+    color: #007cba;
+}
+
+.gss-loading {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+.gss-confirm-btn {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
