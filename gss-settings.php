@@ -378,7 +378,7 @@ add_action('woocommerce_loaded', function () {
                 $mailer->send($order->get_billing_email(), $subject_cust, $mailer->wrap_message($subject_cust, $msg_cust), $headers);
 
                 // 2. Admin Email
-                $admin_email = 'salil.saurav@digitalwebsolutions.in'; // Or get_option('admin_email')
+                $admin_email = get_option('admin_email');
                 $subject_admin = "ACTION REQUIRED: Freight Quote Order #{$order_id}";
                 $msg_admin = "<h2>Freight Quote Required</h2><p>Please manually calculate freight for Order #{$order_id}.</p>";
                 $msg_admin .= "<p><a href='" . admin_url('post.php?post=' . $order_id . '&action=edit') . "'>View Order</a></p>";
